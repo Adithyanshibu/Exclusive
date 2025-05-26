@@ -1,0 +1,415 @@
+
+
+#pages {
+    margin-top: 70px;
+
+}
+
+
+#pages .wrapper .top {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+
+}
+
+#pages .wrapper .top h1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    opacity: 50%;
+    
+
+}
+
+#pages .wrapper .top .hash {
+    color: #000;
+    opacity: 50%;
+
+}
+
+
+#pages .wrapper .top h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    
+
+}
+#pages .wrapper  #product_container { 
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; 
+}
+
+.product-item:nth-child(9) .product-card .colourchange img ,
+.product-item:nth-child(10) .product-card .colourchange img ,
+.product-item:nth-child(11) .product-card .colourchange img ,
+.product-item:nth-child(12) .product-card .colourchange img ,
+.product-item:nth-child(13) .product-card .colourchange img ,
+.product-item:nth-child(14) .product-card .colourchange img ,
+.product-item:nth-child(15) .product-card .colourchange img ,
+.product-item:nth-child(16) .product-card .colourchange img { 
+
+    display: none;
+
+}
+
+.product-card .product-icons .offer-badge { 
+    font-size: 12px;
+    font-weight: 400;
+    color: #fafafa;
+    padding: 4px 12px;
+    background: #db4444;
+    border-radius: 4px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+ }
+
+ .product-item:nth-child(9) .product-icons img ,
+ .product-item:nth-child(10) .product-icons img ,
+ .product-item:nth-child(11) .product-icons img ,
+ .product-item:nth-child(12) .product-icons img {
+
+    padding-top: 20px;
+   
+ }
+
+
+
+
+
+
+
+footer { 
+    background: #000;
+   
+
+}
+
+footer .container { 
+    padding-top: 80px;
+    padding-bottom: 150px;
+
+   
+
+
+}
+
+footer .container .wrapper { 
+    display: flex;
+    justify-content: space-between;
+    gap: 87px;
+
+}
+
+footer .container .wrapper .exclusive { 
+
+}
+
+footer .container .wrapper .exclusive .top { 
+
+}
+
+footer .container .wrapper .exclusive .top h1 { 
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+
+
+}
+
+footer .container .wrapper .exclusive .top h2 { 
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+
+footer .container .wrapper .exclusive .top p { 
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+
+footer .container .wrapper .exclusive .email {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+footer .container .wrapper .exclusive .email input {
+    padding: 12px 16px; 
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    background: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #fff;
+   
+    
+}
+
+footer .container .wrapper .exclusive .email img {
+    position: absolute; 
+    right: 12px; 
+    cursor: pointer;
+   
+
+}
+
+
+
+footer .container .wrapper .Support { 
+
+
+}
+
+footer .container .wrapper .Support h1 { 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 18px;
+
+}
+
+footer .container .wrapper .Support ul { 
+ 
+}
+
+footer .container .wrapper .Support ul li { 
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 12px;
+
+}
+
+footer .container .wrapper .Account { 
+
+}
+
+footer .container .wrapper .Account h1 { 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 18px;
+
+}
+
+footer .container .wrapper .Account ul { 
+
+}
+
+footer .container .wrapper .Account ul li { 
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 12px;
+
+}
+
+footer .container .wrapper .Quicklink { 
+
+}
+
+footer .container .wrapper .Quicklink h1 { 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 18px;
+
+}
+
+footer .container .wrapper .Quicklink ul { 
+
+}
+
+footer .container .wrapper .Quicklink ul li { 
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 12px;
+
+}
+
+footer .container .wrapper .Download-app { 
+
+}
+
+footer .container .wrapper .Download-app h1 { 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 18px;
+
+}
+
+footer .container .wrapper .Download-app p { 
+    font-size: 12px;
+    font-weight: 500;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 18px;
+
+}
+
+footer .container .wrapper .Download-app .QR { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+footer .container .wrapper .Download-app .QR img { 
+    display: block;
+
+}
+
+footer .container .wrapper .Download-app .QR .google { 
+
+}
+
+footer .container .wrapper .Download-app .QR .google img { 
+
+}
+
+footer .container .wrapper .Download-app .icon { 
+    display: flex;
+    gap: 25px;
+}
+
+footer .container .wrapper .Download-app .icon img { 
+   
+
+}
+
+footer .copyright { 
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    opacity: 30%;
+    padding-bottom: 40px;
+    
+
+
+}
+
+footer .copyright img { 
+
+}
+
+footer .copyright p { 
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    
+
+}
+
+
+
+
+@media all and (max-width: 1200px) {
+
+    #pages .wrapper #product_container { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer .container .wrapper .Support ul li {    
+        font-size: 14px;
+    }
+    
+    footer .container .wrapper .Account ul li {
+        font-size: 14px;
+    }
+
+    footer .container .wrapper .Quicklink ul li {
+        font-size: 14px;
+    }
+    
+
+    footer .container .wrapper .exclusive .top h2 {
+        font-size: 14px;
+    }
+
+
+    footer .container .wrapper .exclusive .top p {
+        font-size: 14px;
+    }
+
+    footer .container .wrapper .exclusive .top h1 {
+        font-size: 20px;
+    }
+    
+    
+}
+@media all and (max-width: 980px) {
+
+    #pages .wrapper #product_container { 
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media all and (max-width: 768px) {
+    footer .container .wrapper .exclusive .email input {
+        padding: 12px 0;
+        padding-left: 10px;
+    }
+    #main .main {
+        justify-content: center;
+    }
+    #main .main h1 {
+        margin-left: 0;
+        
+    }
+}
+
+@media all and (max-width: 640px) {
+
+    #pages .wrapper #product_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .container .wrapper .Quicklink ul li {
+        font-size: 12px;
+    }
+    footer .container .wrapper .exclusive .top h2 {
+        font-size: 12px;
+    }
+    footer .container .wrapper .exclusive .top p {
+        font-size: 12px;
+    }
+    footer .container .wrapper .exclusive .top h1 {
+        font-size: 18px;
+    }
+    footer .container .wrapper .Support h1 {
+        font-size: 18px;
+    }
+    footer .container .wrapper .Support ul li {
+        font-size: 12px;
+    }
+    footer .container .wrapper .Account h1 {
+        font-size: 18px;
+    }
+    footer .container .wrapper .Account ul li {
+        font-size: 12px;
+    }
+    footer .container .wrapper .Download-app h1 {
+        font-size: 18px;
+    }
+}
