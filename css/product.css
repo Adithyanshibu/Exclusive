@@ -1,415 +1,302 @@
-
-
-#pages {
-    margin-top: 70px;
-
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #253858;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 500;
 }
 
-
-#pages .wrapper .top {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 40px;
+a{
 
 }
-
-#pages .wrapper .top h1 {
-    font-size: 14px;
-    font-weight: 400;
-    color: #000;
-    opacity: 50%;
-    
-
+a:hover,.submit:hover{
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
 }
-
-#pages .wrapper .top .hash {
-    color: #000;
-    opacity: 50%;
-
+.thumb{
+	display: block;
 }
-
-
-#pages .wrapper .top h2 {
-    font-size: 14px;
-    font-weight: 400;
-    color: #000;
-    
-
+.thumb img{
+	display: block;
+	width:100%;
 }
-#pages .wrapper  #product_container { 
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px; 
+p{
+	line-height:18.9px;
+	font-size: 14px;
+	font-family:'PoppinsLight',Arial, Helvetica, sans-serif ;
+	font-weight: 500;
+	color: #42526E;
 }
+h2{
+    font-family: "Inter", Arial;
+    font-weight: 700;
+    color: #000000;
 
-.product-item:nth-child(9) .product-card .colourchange img ,
-.product-item:nth-child(10) .product-card .colourchange img ,
-.product-item:nth-child(11) .product-card .colourchange img ,
-.product-item:nth-child(12) .product-card .colourchange img ,
-.product-item:nth-child(13) .product-card .colourchange img ,
-.product-item:nth-child(14) .product-card .colourchange img ,
-.product-item:nth-child(15) .product-card .colourchange img ,
-.product-item:nth-child(16) .product-card .colourchange img { 
-
-    display: none;
-
-}
-
-.product-card .product-icons .offer-badge { 
-    font-size: 12px;
-    font-weight: 400;
-    color: #fafafa;
-    padding: 4px 12px;
-    background: #db4444;
-    border-radius: 4px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
- }
-
- .product-item:nth-child(9) .product-icons img ,
- .product-item:nth-child(10) .product-icons img ,
- .product-item:nth-child(11) .product-icons img ,
- .product-item:nth-child(12) .product-icons img {
-
-    padding-top: 20px;
-   
- }
-
-
-
-
-
-
-
-footer { 
-    background: #000;
-   
-
-}
-
-footer .container { 
-    padding-top: 80px;
-    padding-bottom: 150px;
-
-   
 
 
 }
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width:1200px;
+}
 
-footer .container .wrapper { 
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-VariableFontopszwght.eot');
+    src: url('../FONT/Inter/Inter-VariableFontopszwght.woff') format('woff');
+     
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('fonts/Poppins-Light.eot');
+    src: url('../FONT/Poppins/Poppins-Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.eot');
+    src: url('../FONT/Poppins/Poppins-Regular.woff') format('woff');
+}    
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('fonts/Poppins-SemiBold.eot');
+    src: url('../FONT/Poppins/Poppins-SemiBold.woff') format('woff');       
+}
+
+
+
+::placeholder {
+  color: #C0CCDA;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #C0CCDA;
+}
+
+::-ms-input-placeholder {
+  color: #C0CCDA;
+}
+
+
+/* direction section styling */
+
+
+#direction {
+
+}
+#direction section.wrapper{
+ 
+
+}
+#direction section.wrapper div.direct{
     display: flex;
     justify-content: space-between;
-    gap: 87px;
-
-}
-
-footer .container .wrapper .exclusive { 
-
-}
-
-footer .container .wrapper .exclusive .top { 
-
-}
-
-footer .container .wrapper .exclusive .top h1 { 
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 15px;
-
-
-}
-
-footer .container .wrapper .exclusive .top h2 { 
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 15px;
-
-}
-
-footer .container .wrapper .exclusive .top p { 
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 15px;
-
-}
-
-footer .container .wrapper .exclusive .email {
-    position: relative; 
-    display: flex;
     align-items: center;
-}
-
-footer .container .wrapper .exclusive .email input {
-    padding: 12px 16px; 
-    border: 1.5px solid #fff;
-    border-radius: 4px;
-    background: #000;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: #fff;
-   
-    
-}
-
-footer .container .wrapper .exclusive .email img {
-    position: absolute; 
-    right: 12px; 
-    cursor: pointer;
-   
-
-}
-
-
-
-footer .container .wrapper .Support { 
-
-
-}
-
-footer .container .wrapper .Support h1 { 
-    font-size: 20px;
-    font-weight: 500;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 18px;
-
-}
-
-footer .container .wrapper .Support ul { 
- 
-}
-
-footer .container .wrapper .Support ul li { 
-    font-size: 16px;
-    font-weight: 400;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 12px;
-
-}
-
-footer .container .wrapper .Account { 
-
-}
-
-footer .container .wrapper .Account h1 { 
-    font-size: 20px;
-    font-weight: 500;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 18px;
-
-}
-
-footer .container .wrapper .Account ul { 
-
-}
-
-footer .container .wrapper .Account ul li { 
-    font-size: 16px;
-    font-weight: 400;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 12px;
-
-}
-
-footer .container .wrapper .Quicklink { 
-
-}
-
-footer .container .wrapper .Quicklink h1 { 
-    font-size: 20px;
-    font-weight: 500;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 18px;
-
-}
-
-footer .container .wrapper .Quicklink ul { 
-
-}
-
-footer .container .wrapper .Quicklink ul li { 
-    font-size: 16px;
-    font-weight: 400;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 12px;
-
-}
-
-footer .container .wrapper .Download-app { 
-
-}
-
-footer .container .wrapper .Download-app h1 { 
-    font-size: 20px;
-    font-weight: 500;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 18px;
-
-}
-
-footer .container .wrapper .Download-app p { 
-    font-size: 12px;
-    font-weight: 500;
-    font-family: poppins;
-    color: #fff;
-    margin-bottom: 18px;
-
-}
-
-footer .container .wrapper .Download-app .QR { 
-    display: flex;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    gap: 12px;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    width: 134px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+#direction section.wrapper  div.direct a{
+    color: #000000;
+
+
+}
+#direction section.wrapper  div.direct a.old{
+    opacity: 30%;
+
+}
+#direction section.wrapper  div.direct p{
+    color: #000000;
+
 
 }
 
-footer .container .wrapper .Download-app .QR img { 
-    display: block;
 
+
+/* catagory middle section */
+#catagory section.wrapper{
+	/* padding: 27px 0px;	 */
 }
 
-footer .container .wrapper .Download-app .QR .google { 
-
-}
-
-footer .container .wrapper .Download-app .QR .google img { 
-
-}
-
-footer .container .wrapper .Download-app .icon { 
+#catagory section.wrapper div.middle{
     display: flex;
-    gap: 25px;
-}
-
-footer .container .wrapper .Download-app .icon img { 
-   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 
 }
+#catagory section.wrapper div.middle div.item {
+    height:322px;
+    width:270px;
+    margin-bottom: 27px;
 
-footer .copyright { 
+
+
+}
+#catagory section.wrapper div.middle div.item div.image  {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    text-align: center;
-    opacity: 30%;
-    padding-bottom: 40px;
+    height:250x;
+    width:270px;
+    background-color:#F5F5F5;
+    border-radius: 4px;
+    position: relative;
     
-
-
 }
+#catagory section.wrapper div.middle div.item div.image div.left  
+{
+    position: absolute;
 
-footer .copyright img { 
-
+    width: 51px;
+    height: 26px;
+    top: 10px;
+    left: 12px;
+    background-color: #DB4444;
+    border-radius: 4px;
+	display: flex;
+    justify-content: center;
+	align-items : center;
+    
 }
-
-footer .copyright p { 
-    color: #fff;
-    font-size: 16px;
+#catagory section.wrapper div.middle div.item div.image div.left p{
+    color: white;
+    font-size: 12px;
     font-weight: 400;
+   
+}  
+
+
+#catagory section.wrapper div.middle div.item div.image div.center  {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    height:180px;
+    width:190px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     
+}
+#catagory section.wrapper div.middle div.item div.image div.center img  {
+	height:180px;
+    width:190px;
+	scale: crop;
+    
+   
 
 }
-
-
-
-
-@media all and (max-width: 1200px) {
-
-    #pages .wrapper #product_container { 
-        grid-template-columns: repeat(3, 1fr);
-    }
-    footer .container .wrapper .Support ul li {    
-        font-size: 14px;
-    }
-    
-    footer .container .wrapper .Account ul li {
-        font-size: 14px;
-    }
-
-    footer .container .wrapper .Quicklink ul li {
-        font-size: 14px;
-    }
-    
-
-    footer .container .wrapper .exclusive .top h2 {
-        font-size: 14px;
-    }
-
-
-    footer .container .wrapper .exclusive .top p {
-        font-size: 14px;
-    }
-
-    footer .container .wrapper .exclusive .top h1 {
-        font-size: 20px;
-    }
+#catagory section.wrapper div.middle div.item div.image div.right  {
+    display: grid;
+    height:76px;
+    margin-top:12px;
     
     
 }
-@media all and (max-width: 980px) {
-
-    #pages .wrapper #product_container { 
-        grid-template-columns: repeat(2, 1fr);
-        
-    }
+#catagory section.wrapper div.middle div.item div.image div.right a  {
+}
+#catagory section.wrapper div.middle div.item div.image div.right a img  {
+    height: 34px;
+    width:34px;
 }
 
-@media all and (max-width: 768px) {
-    footer .container .wrapper .exclusive .email input {
-        padding: 12px 0;
-        padding-left: 10px;
-    }
-    #main .main {
-        justify-content: center;
-    }
-    #main .main h1 {
-        margin-left: 0;
-        
-    }
+#catagory section.wrapper div.middle div.item div.image div.cart-btn {
+    display: none;
+}
+
+#catagory section.wrapper div.middle div.item div.image:hover div.cart-btn {
+    position: absolute;
+    display: block;
+    top: 220px;
+    background: #000;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+}
+
+#catagory section.wrapper div.middle div.item div.image div.cart-btn button {
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+
+#catagory section.wrapper div.middle div.item div.container  {
+    margin-top: 16px;
+}
+#catagory section.wrapper div.middle div.item div.container h5  {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+}
+#catagory section.wrapper div.middle div.item div.container ul  {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-top: 8px;
+}
+#catagory section.wrapper div.middle div.item div.container ul li  {
+
+}
+#catagory section.wrapper div.middle div.item div.container ul li img  {
+}
+#catagory section.wrapper div.middle div.item div.container ul li p.price  {
+    font-size: 16px;
+    color: #DB4444;
+    font-weight:700;
+    ;
+}
+#catagory section.wrapper div.middle div.item div.container ul li p.rate  {
+    font-size: 14px;
+    color:#000000;
+    opacity: 30%;
+    
 }
 
 @media all and (max-width: 640px) {
-
-    #pages .wrapper #product_container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    footer .container .wrapper .Quicklink ul li {
-        font-size: 12px;
-    }
-    footer .container .wrapper .exclusive .top h2 {
-        font-size: 12px;
-    }
-    footer .container .wrapper .exclusive .top p {
-        font-size: 12px;
-    }
-    footer .container .wrapper .exclusive .top h1 {
-        font-size: 18px;
-    }
-    footer .container .wrapper .Support h1 {
-        font-size: 18px;
-    }
-    footer .container .wrapper .Support ul li {
-        font-size: 12px;
-    }
-    footer .container .wrapper .Account h1 {
-        font-size: 18px;
-    }
-    footer .container .wrapper .Account ul li {
-        font-size: 12px;
-    }
-    footer .container .wrapper .Download-app h1 {
-        font-size: 18px;
+    #catagory section.wrapper div.middle {
+        justify-content: center;
+        width: 100%;
     }
 }

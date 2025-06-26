@@ -1,91 +1,90 @@
-// Fetch all products and initilize search 
 
-const productList = document.getElementById("product_container");
-const searchInput = document.getElementById("search_bar");
 
-window.addEventListener("load", function () {
-  fetch("./js/all.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Error fetching products");
-      }
-      console.log("Fetched successfully:", response);
-      return response.json();
+
+// product script
+fetch('http://127.0.0.1:5500/JS/product.json')
+    .then(response => response.json())
+    .then(data => {
+        const bottomDiv = document.querySelector("#bottom");
+
+        data.products.forEach(product => {
+            const item = document.createElement("div");
+            item.classList.add("item");
+
+            // Add "New" label only if product.new is not null
+            let newLabel = "";
+            if (product.new !== null) {
+                newLabel = `
+                    <div class="left">
+                        <p>${product.new}</p>
+                    </div>`;
+            }
+
+            item.innerHTML = `
+                <div class="image">
+                    ${newLabel}  <!-- "New" label appears inside .image -->
+                    <div class="center">
+                        <img src="${product.image}" alt="${product.name}"/>
+                    </div>
+                    <div class="right">
+                        <a href="#"><img src="${product.rimage}" alt="View"></a>
+                        <a href="#"><img src="${product.himage}" alt="Like"></a>
+                    </div>
+                    <div class="cart-btn">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <h5>${product.name}</h5>
+                    <ul>
+                        <li><p class="price">${product.price}</p></li>
+                        <li><img class="rating" src="${product.rating}" alt="Rating"></li>
+                        <li><p class="rate">(${product.reviews})</p></li>
+                    </ul>
+                </div>
+            `;
+
+            bottomDiv.appendChild(item);
+        });
     })
-    .then((data) => {
-      console.log("Data fetched:", data);
+    .catch(error => console.error("Error fetching JSON:", error));
 
-     
-      const productItems = data.map((product) => {
-        const productItem = document.createElement("li");
-        productItem.classList.add("product-item");
-        productItem.innerHTML = `
-          <div class="product-card" id="product-card">
-            <div class="product-icons">
-              <img src="${product.image}" alt="${product.name}" />
-              ${product.new ? '<span class="new-badge">NEW</span>' : ""}
-              ${product.offer ? `<span class="offer-badge">${product.offer}</span>` : ""}
-              <span class="icon-heart">
-                <img src="${product.heart}" alt="${product.heart}" />
-              </span>
-              <span class="icon-eye">
-                <img src="${product.eye}" alt="${product.eye}" />
-              </span>
-            </div>
 
-            <div class="add-to-cart">
-              <button class="cart">Add to Cart</button>
-            </div>
 
-            <h3 class="product-name">${product.name}</h3>
+//menu button
+function toggleMenu() {
+    const menu = document.getElementById('menu');
 
-            <div class="rating">
-              <p class="price">$${product.price}</p>
-              <img src="${product.star}" alt="star" />
-              <p class="review">(${product.reviews})</p>
-            </div>
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+}
 
-            <span class="colourchange">
-              <img src="${product.colourchange}" alt="${product.colourchange}" />
-            </span>
-          </div>
-        `;
-        return productItem;
-      });
 
-  
-      productList.append(...productItems);
 
-      
-      initializeSearch();
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+
+
+
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    let searchQuery = this.value.toLowerCase();
+    let items = document.querySelectorAll('#bottom .item');
+    
+    items.forEach(item => {
+        let itemText = item.textContent.toLowerCase();
+        
+        if (itemText.includes(searchQuery)) {
+            item.style.display = 'block';  // Show the item if it matches the search
+        } else {
+            item.style.display = 'none';   // Hide the item if it doesn't match the search
+        }
     });
 });
 
 
-function initializeSearch() {
-  if (searchInput && productList) {
-    searchInput.addEventListener("input", () => {
-      const filter = searchInput.value.toLowerCase();  // Get the search input value in lowercase
 
-      // Loop through all product items and filter them based on the product name
-      const productItems = productList.querySelectorAll(".product-item");
 
-      productItems.forEach((product) => {
-        const productName = product.querySelector(".product-name");
 
-        if (productName) {
-          const productText = productName.textContent.toLowerCase(); // Get product name text in lowercase
-
-          if (productText.includes(filter)) {
-            product.style.display = ""; // Show matching product
-          } else {
-            product.style.display = "none"; // Hide non-matching product
-          }
-        }
-      });
-    });
-  }
-}
